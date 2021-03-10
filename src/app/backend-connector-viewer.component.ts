@@ -1,9 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormControl } from '@angular/forms';
-import { BackendConnectorService } from '@fluke/services/backend-connector.service';
+import { BackendConnectorService } from '@HashColonBackend/backend-connector.service';
 
 @Component({
-  selector: 'fluke-backend-connector-viewer',
+  selector: 'hashcolon-backend-connector-viewer',
   templateUrl: './backend-connector-viewer.component.html',
   styleUrls: ['./backend-connector-viewer.component.scss']
 })

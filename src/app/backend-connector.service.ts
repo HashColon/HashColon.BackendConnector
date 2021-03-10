@@ -1,6 +1,6 @@
 import { Injectable, Output } from '@angular/core';
 import { Observable } from 'rxjs';
-import { FlukeSharpMessage, FlukeSharpMessageType } from '@fluke/services/flukesharp-message'
+import { HashColonMessageType, HashColonMessage } from '@HashColonBackend/hashcolon-message'
 import { EventEmitter } from 'events';
 
 @Injectable({
@@ -57,7 +57,7 @@ export class BackendConnectorService {
     });
   }
 
-  sendMessage(msg: FlukeSharpMessage): string {
+  sendMessage(msg: HashColonMessage): string {
     if (this.isSocketReady) {
       this.ws.send(JSON.stringify(msg));
       this.messageList[msg.messageKey] = msg;
@@ -72,8 +72,8 @@ export class BackendConnectorService {
 
   requestGeoJsons(filepaths: string[]): string {
     if (this.isSocketReady) {
-      var msg: FlukeSharpMessage = {
-        messageType: FlukeSharpMessageType.req_geojson,
+      var msg: HashColonMessage = {
+        messageType: HashColonMessageType.req_geojson,
         messageKey: this.generateKey(),
         messageContent: {
           filepaths: filepaths
@@ -86,8 +86,8 @@ export class BackendConnectorService {
 
   requestFileList(root: string, extension: string, recursive: boolean = false, options?): string {
     if (this.isSocketReady) {
-      var msg: FlukeSharpMessage = {
-        messageType: FlukeSharpMessageType.req_filelist,
+      var msg: HashColonMessage = {
+        messageType: HashColonMessageType.req_filelist,
         messageKey: this.generateKey(),
         messageContent: {
           root: root,
@@ -103,8 +103,8 @@ export class BackendConnectorService {
 
   requestDirList(root: string): string {
     if (this.isSocketReady) {
-      var msg: FlukeSharpMessage = {
-        messageType: FlukeSharpMessageType.req_dirlist,
+      var msg: HashColonMessage = {
+        messageType: HashColonMessageType.req_dirlist,
         messageKey: this.generateKey(),
         messageContent: { root: root }
       };
