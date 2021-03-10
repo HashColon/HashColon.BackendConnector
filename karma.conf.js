@@ -19,7 +19,7 @@ module.exports = function (config) {
       suppressAll: true // removes the duplicated traces
     },
     coverageReporter: {
-      dir: require('path').join(__dirname, './coverage/Hashcolon-BackendConnector'),
+      dir: require('path').join(__dirname, './coverage/HashColon-BackendConnector'),
       subdir: '.',
       reporters: [
         { type: 'html' },

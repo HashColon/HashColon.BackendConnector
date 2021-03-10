@@ -16,16 +16,16 @@ describe('AppComponent', () => {
     expect(app).toBeTruthy();
   });
 
-  it(`should have as title 'Hashcolon-BackendConnector'`, () => {
+  it(`should have as title 'HashColon-BackendConnector'`, () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('Hashcolon-BackendConnector');
+    expect(app.title).toEqual('HashColon-BackendConnector');
   });
 
   it('should render title', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('Hashcolon-BackendConnector app is running!');
+    expect(compiled.querySelector('.content span').textContent).toContain('HashColon-BackendConnector app is running!');
   });
 });

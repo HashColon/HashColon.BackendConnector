@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "Hashcolon-BackendConnector": {
+    "HashColon-BackendConnector": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/Hashcolon-BackendConnector",
+            "outputPath": "dist/HashColon-BackendConnector",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "Hashcolon-BackendConnector:build"
+            "browserTarget": "HashColon-BackendConnector:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "Hashcolon-BackendConnector:build:production"
+              "browserTarget": "HashColon-BackendConnector:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "Hashcolon-BackendConnector:build"
+            "browserTarget": "HashColon-BackendConnector:build"
           }
         },
         "test": {
@@ -113,16 +113,19 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "Hashcolon-BackendConnector:serve"
+            "devServerTarget": "HashColon-BackendConnector:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "Hashcolon-BackendConnector:serve:production"
+              "devServerTarget": "HashColon-BackendConnector:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "Hashcolon-BackendConnector"
+  "defaultProject": "HashColon-BackendConnector",
+  "cli": {
+    "analytics": false
+  }
 }
